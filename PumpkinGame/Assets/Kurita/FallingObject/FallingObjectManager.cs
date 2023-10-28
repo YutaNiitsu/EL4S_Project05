@@ -15,13 +15,16 @@ public class FallingObjectManager : MonoBehaviour
     private GameObject currentOperatedInstance;//現在落下させようとしているオブジェクト
     [Header("UI")]
     [SerializeField] private ScoreScript _scoreScript;
+    [SerializeField] private NextScript nextScript;
     private static int _createObjectScore;
+    private int _nextIndex;
 
     private void Start()
     {
         currentOperatedInstance = null;
         _createObjectIndex = 0;
         _createObjectScore = 0;
+        NextIcon();
     }
 
     void Update()
@@ -35,8 +38,6 @@ public class FallingObjectManager : MonoBehaviour
         //マウスが押されたら生成する
         if (Input.GetMouseButtonDown(0))
         {
-            //生成するオブジェクトの種類を決める
-            int index = Random.Range(0, 2);
             //生成位置を決める
             Vector3 startPosition;
             startPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -45,8 +46,10 @@ public class FallingObjectManager : MonoBehaviour
             if (startPosition.x < _leftLimitTransform.position.x || _rightLimitTransform.position.x < startPosition.x)
                 return;
             //生成する
-            currentOperatedInstance = Instantiate(_prefabList[index], startPosition, Quaternion.identity);
+            currentOperatedInstance = Instantiate(_prefabList[_nextIndex], startPosition, Quaternion.identity);
             currentOperatedInstance.GetComponent<Rigidbody2D>().gravityScale = 0;
+
+            NextIcon();
         }
 
         if (currentOperatedInstance)
@@ -100,8 +103,30 @@ public class FallingObjectManager : MonoBehaviour
         _createObjectScore = score;
     }
 
-    private void UI()
+    private void NextIcon()
     {
-        
+        //次候補
+        _nextIndex = Random.Range(0, 3);
+        string name = null;
+        switch (_nextIndex)
+        {
+            case 0:
+                name = "candy";
+                break;
+            case 1:
+                name = "gumi";
+                break;
+            case 2:
+                name = "choco";
+                break;
+            case 3:
+                name = "cokkie";
+                break;
+            case 4:
+                name = "jack";
+                break;
+        }
+
+        nextScript.SetNextIcon(name);
     }
 }
