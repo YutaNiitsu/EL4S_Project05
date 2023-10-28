@@ -28,12 +28,13 @@ public class NiseGameSceneChenge : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                //シーン遷移を書く
+                //↓ゲームからリザルトに移行したいときに書く処理
                 if (SceneChanger.instance)
                 {
                     SceneChanger.instance.ChangeScene("ResultScene");
                 }
-
+                //↓リザルトにスコアを渡したいときに書く処理
+                //（遷移時でも常時でも可能）
                 if(Score.instance)
                 {
                     Score.instance.SetScore(200);
