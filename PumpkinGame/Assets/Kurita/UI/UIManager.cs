@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     private float _frame = 0;
+    private bool first = true;
 
     private void Update()
     {
@@ -15,6 +16,11 @@ public class UIManager : MonoBehaviour
         {
             _frame = 0;
             Debug.Log("ƒV[ƒ“‚ğ“Ç‚İ‚İ‚Ü‚·");
+            if (first)
+            {
+                first = false;
+                SceneManager.LoadScene("");
+            }
             //SceneManager.LoadScene("");
         }
     }

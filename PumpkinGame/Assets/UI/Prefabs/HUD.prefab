@@ -214,6 +214,8 @@ MonoBehaviour:
     value: {fileID: 21300000, guid: 1daa2a47f634b584e88eae3e97efcf08, type: 3}
   - key: jack
     value: {fileID: 21300000, guid: a23aa04aee475c04389c6d26559d3883, type: 3}
+  - key: sekiya
+    value: {fileID: 21300000, guid: e79814f002431d040a061c5b42442dd8, type: 3}
 --- !u!1 &1872922555754581001
 GameObject:
   m_ObjectHideFlags: 0

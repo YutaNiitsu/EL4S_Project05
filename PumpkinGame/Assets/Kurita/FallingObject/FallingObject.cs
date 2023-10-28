@@ -9,7 +9,7 @@ public class FallingObject : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (_index == 5)
+        if (_index == 6)
             return;
 
         if (this.gameObject.tag == collision.gameObject.tag) 

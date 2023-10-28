@@ -322,6 +322,14 @@ PrefabInstance:
       propertyPath: _rightLimitTransform
       value: 
       objectReference: {fileID: 254313565}
+    - target: {fileID: 309877190818854324, guid: 7a4727151853227408c63532f19717d4, type: 3}
+      propertyPath: _prefabList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 309877190818854324, guid: 7a4727151853227408c63532f19717d4, type: 3}
+      propertyPath: _prefabList.Array.data[5]
+      value: 
+      objectReference: {fileID: 3710372351994559701, guid: e9997694a350c464491226898defd8f1, type: 3}
     - target: {fileID: 2543230172985108405, guid: 7a4727151853227408c63532f19717d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -125,6 +125,9 @@ public class FallingObjectManager : MonoBehaviour
             case 4:
                 name = "jack";
                 break;
+            case 5:
+                name = "sekiya";
+                break;
         }
 
         nextScript.SetNextIcon(name);

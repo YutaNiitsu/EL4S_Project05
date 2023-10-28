@@ -12,7 +12,7 @@ public class Floor : MonoBehaviour
         GameObject fallingObject = collision.gameObject;
         if (fallingObject.GetComponent<FallingObject>())
         {
-            Instantiate(UI);
+            //Instantiate(UI);
             Destroy(fallingObject);
         }
     }
