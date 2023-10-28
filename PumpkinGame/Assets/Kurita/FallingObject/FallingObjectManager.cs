@@ -24,7 +24,7 @@ public class FallingObjectManager : MonoBehaviour
         currentOperatedInstance = null;
         _createObjectIndex = 0;
         _createObjectScore = 0;
-        NextIcon();
+
     }
 
     void Update()
