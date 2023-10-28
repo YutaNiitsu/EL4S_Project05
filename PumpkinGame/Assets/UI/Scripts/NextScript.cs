@@ -29,8 +29,6 @@ public class NextScript : MonoBehaviour
     void Start()
     {
         spriteRenderer = Next.GetComponent<SpriteRenderer>();
-
-        SetNextIcon("tomato");
     }
 
     // Update is called once per frame
