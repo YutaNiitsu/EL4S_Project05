@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FallObject1
+  - FallObject2
+  - FallObject3
+  - FallObject4
+  - FallObject5
   layers:
   - Default
   - TransparentFX
