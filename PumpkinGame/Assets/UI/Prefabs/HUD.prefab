@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419.9972, y: -92.063}
-  m_SizeDelta: {x: 271.498, y: 304.38}
+  m_AnchoredPosition: {x: 419.9972, y: -127.357925}
+  m_SizeDelta: {x: 271.498, y: 233.7902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1683842380685931764
 GameObject:
@@ -204,12 +204,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Next: {fileID: 1872922555754581001}
   Icons:
-  - key: ninjin
-    value: {fileID: 21300000, guid: c86cdf0e19c850643a73767cca9d33bf, type: 3}
-  - key: tomato
-    value: {fileID: 21300000, guid: 78a08c7b6de94064faf5e06f450fe34d, type: 3}
-  - key: ninniku
-    value: {fileID: 21300000, guid: ae5a6f80002488c408eecaa4beabb531, type: 3}
+  - key: candy
+    value: {fileID: 21300000, guid: 9d488a24e1224144db89430f56fecc0c, type: 3}
+  - key: gumi
+    value: {fileID: 21300000, guid: 8de10b0427a0c8e48ada16f06a920799, type: 3}
+  - key: choco
+    value: {fileID: 21300000, guid: 0849aa6af9894824c88a465d82d5456d, type: 3}
+  - key: cokkie
+    value: {fileID: 21300000, guid: 1daa2a47f634b584e88eae3e97efcf08, type: 3}
+  - key: jack
+    value: {fileID: 21300000, guid: a23aa04aee475c04389c6d26559d3883, type: 3}
 --- !u!1 &1872922555754581001
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +287,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c86cdf0e19c850643a73767cca9d33bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d488a24e1224144db89430f56fecc0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -405,10 +409,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 105446906183139645}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19.160019}
-  m_SizeDelta: {x: -0.5, y: -37.940002}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0010052, y: -14}
+  m_SizeDelta: {x: 271.5, y: 163.8627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7551534835568110688
 CanvasRenderer:
@@ -438,7 +442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ec3d4bab61b84e54fbd259319affbab0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -586,7 +590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000019073, y: 133.03}
+  m_AnchoredPosition: {x: -0.0010185, y: 97.74}
   m_SizeDelta: {x: 202.9409, y: 38.3112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &886724816207422752
