@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _index: 5
+  _score: 5
 --- !u!212 &1583177805314628736
 SpriteRenderer:
   m_ObjectHideFlags: 0
