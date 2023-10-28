@@ -9,6 +9,9 @@ public class FallingObject : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (_index == 5)
+            return;
+
         if (this.gameObject.tag == collision.gameObject.tag) 
         {
             FallingObjectManager.NewObjectInformation(collision.gameObject.transform.position, _index, _score);
