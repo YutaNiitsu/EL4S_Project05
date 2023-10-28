@@ -2,16 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Manager : MonoBehaviour
+public class FallingObjectManager : MonoBehaviour
 {
+    [Header("インゲーム")]
     [SerializeField] private List<GameObject> _prefabList = new List<GameObject>();//落下オブジェクトのプレハブ
     [SerializeField] private GameObject _setParentObject;//落下オブジェクトの追加先
     [SerializeField] private Transform _basicStartTransform;//落下開始位置の基準点
     [SerializeField] private Transform _leftLimitTransform;//落下開始位置の限界点
     [SerializeField] private Transform _rightLimitTransform;//落下開始位置の限界点
     private static List<Vector3> _hitObjectPositionList = new List<Vector3>();//ヒットしたオブジェクトを管理する
-    private static int _createObjectIndex = 0;
-    private GameObject currentOperatedInstance = null;//現在落下させようとしているオブジェクト
+    private static int _createObjectIndex;
+    private GameObject currentOperatedInstance;//現在落下させようとしているオブジェクト
+    [Header("UI")]
+    [SerializeField] private ScoreScript _scoreScript;
+    private static int _createObjectScore;
+
+    private void Start()
+    {
+        currentOperatedInstance = null;
+        _createObjectIndex = 0;
+        _createObjectScore = 0;
+    }
 
     void Update()
     {
@@ -61,7 +72,7 @@ public class Manager : MonoBehaviour
 
     private void Hit()
     {
-        if (_hitObjectPositionList.Count == 2)
+        if (_hitObjectPositionList.Count >= 2)
         {
             ////新しいオブジェクトの生成(ぶつかったオブジェクト同士が「最大のオブジェクト」であれば生成しない)
             if (_createObjectIndex < _prefabList.Count)
@@ -69,19 +80,28 @@ public class Manager : MonoBehaviour
                 //新しいオブジェクトの生成
                 //①生成位置を決める
                 Vector3 newPosition = Vector3.Lerp(_hitObjectPositionList[0], _hitObjectPositionList[1], 0.5f);
-                //②生成する種類を決定する
+                //②種類を決定して生成する
                 GameObject fallingObject = _prefabList[_createObjectIndex + 1];
                 Instantiate(fallingObject, newPosition, Quaternion.identity);
+                //③スコアを加算する
+                _scoreScript.AddScore(_createObjectScore);
             }
-            //③操作が終わったので今扱っているヒットオブジェクトのリストをClearする
+            //操作が終わったので今扱っているヒットオブジェクトのリストをClearする
             _hitObjectPositionList.Clear();
             _createObjectIndex = 0;
+            _createObjectScore = 0;
         }
     }
 
-    public static void SetPosition(Vector3 position,int index)
+    public static void NewObjectInformation(Vector3 position,int index,int score)
     {
         _hitObjectPositionList.Add(position);
         _createObjectIndex = index;
+        _createObjectScore = score;
+    }
+
+    private void UI()
+    {
+        
     }
 }
