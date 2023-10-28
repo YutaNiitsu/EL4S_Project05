@@ -31,7 +31,7 @@ public class TitleSceneChange : MonoBehaviour
                 //ƒV[ƒ“‘JˆÚ‚ğ‘‚­
                 if (SceneChanger.instance)
                 {
-                    SceneChanger.instance.ChangeScene("NiseGameScene");
+                    SceneChanger.instance.ChangeScene("Game");
                 }
             }
         }
